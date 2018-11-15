@@ -1,7 +1,8 @@
 FacebookPlayground
 ==================
 
-### About
+### DEV
 
-This is your project's README.md file. It helps users understand what your
-project does, how to use it and anything else they may need to know.
+[Facebook control panel](https://developers.facebook.com/apps/602213973282943/dashboard/)
+
+[Messenger Guidone](https://www.messenger.com/t/guidone72)

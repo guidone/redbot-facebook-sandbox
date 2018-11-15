@@ -1,1 +1,569 @@
-[]
+[
+    {
+        "id": "69df7f3e.cca47",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "80431067.debc6",
+        "type": "chatbot-slack-node",
+        "z": "",
+        "botname": "Guidone_bot",
+        "usernames": "",
+        "store": "2f7f54d8.3f7f5c",
+        "log": "",
+        "debug": false
+    },
+    {
+        "id": "2f7f54d8.3f7f5c",
+        "type": "chatbot-context-store",
+        "z": "",
+        "name": "memory",
+        "contextStorage": "memory",
+        "contextParams": ""
+    },
+    {
+        "id": "2384468e.a9cfaa",
+        "type": "chatbot-slack-node",
+        "z": "",
+        "botname": "Guidone_bot",
+        "usernames": "",
+        "store": "3fd53775.38e008",
+        "log": "",
+        "debug": false
+    },
+    {
+        "id": "3fd53775.38e008",
+        "type": "chatbot-context-store",
+        "z": "",
+        "name": "memory",
+        "contextStorage": "memory",
+        "contextParams": ""
+    },
+    {
+        "id": "96154901.613728",
+        "type": "chatbot-facebook-node",
+        "z": "",
+        "botname": "Dacebook DEV",
+        "usernames": "",
+        "store": "2f7f54d8.3f7f5c",
+        "log": "",
+        "debug": false
+    },
+    {
+        "id": "d379564f.449768",
+        "type": "chatbot-message",
+        "z": "69df7f3e.cca47",
+        "name": "",
+        "message": [
+            {
+                "message": "test"
+            }
+        ],
+        "answer": false,
+        "x": 390,
+        "y": 180,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "e3a81773.36b208",
+        "type": "chatbot-image",
+        "z": "69df7f3e.cca47",
+        "name": "test image",
+        "filename": "",
+        "image": "/web/cacca.png",
+        "caption": "Test image",
+        "x": 410,
+        "y": 260,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "9e840455.860ef8",
+        "type": "chatbot-document",
+        "z": "69df7f3e.cca47",
+        "name": "test file",
+        "filename": "/web/cacca.png.zip",
+        "caption": "Test file",
+        "x": 400,
+        "y": 340,
+        "wires": [
+            [
+                "43c564f7.d1f52c",
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "60701f33.41b21",
+        "type": "chatbot-debug",
+        "z": "69df7f3e.cca47",
+        "x": 390,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "43c564f7.d1f52c",
+        "type": "debug",
+        "z": "69df7f3e.cca47",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 629,
+        "y": 352,
+        "wires": []
+    },
+    {
+        "id": "bb92612c.cf558",
+        "type": "chatbot-inline-buttons",
+        "z": "69df7f3e.cca47",
+        "name": "",
+        "buttons": [
+            {
+                "type": "postback",
+                "label": "Postback 1",
+                "value": "postback 1",
+                "answer": "",
+                "alert": false,
+                "style": "default"
+            },
+            {
+                "type": "postback",
+                "label": "Postaback 2",
+                "value": "postback 2",
+                "answer": "Yes!",
+                "alert": false,
+                "style": "primary"
+            },
+            {
+                "type": "postback",
+                "label": "Postback 3",
+                "value": "postback 3",
+                "answer": "Yes!",
+                "alert": false,
+                "style": "danger"
+            },
+            {
+                "type": "dialog",
+                "label": "Open dialog",
+                "value": "dialog1",
+                "answer": "Opened!",
+                "alert": false,
+                "style": ""
+            }
+        ],
+        "message": "",
+        "x": 400,
+        "y": 420,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "e8eb3418.27a448",
+        "type": "chatbot-location",
+        "z": "69df7f3e.cca47",
+        "name": "Loc",
+        "latitude": "43",
+        "longitude": "21",
+        "place": "Bologna",
+        "x": 358,
+        "y": 487,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "7fa7fcb0.df8cc4",
+        "type": "chatbot-audio",
+        "z": "69df7f3e.cca47",
+        "name": "",
+        "filename": "/web/cacca.mp3",
+        "track": false,
+        "x": 389,
+        "y": 548,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "62559e66.ea052",
+        "type": "chatbot-generic-template",
+        "z": "69df7f3e.cca47",
+        "name": "Template 1",
+        "title": "Title",
+        "subtitle": "Si come no",
+        "imageUrl": "",
+        "sharable": true,
+        "aspectRatio": "horizontal",
+        "buttons": [
+            {
+                "type": "postback",
+                "label": "Test 1",
+                "value": "test 1",
+                "answer": "",
+                "alert": false,
+                "style": ""
+            },
+            {
+                "type": "postback",
+                "label": "Test 2",
+                "value": "test 2",
+                "answer": "",
+                "alert": false,
+                "style": "danger"
+            }
+        ],
+        "x": 390,
+        "y": 620,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "b3bef49e.b10078",
+        "type": "chatbot-generic-template",
+        "z": "69df7f3e.cca47",
+        "name": "Template 2",
+        "title": "Title",
+        "subtitle": "Si come no 2",
+        "imageUrl": "",
+        "sharable": true,
+        "aspectRatio": "horizontal",
+        "buttons": [
+            {
+                "type": "postback",
+                "label": "Test 1",
+                "value": "test 1",
+                "answer": "",
+                "alert": false,
+                "style": ""
+            },
+            {
+                "type": "postback",
+                "label": "Test 2",
+                "value": "test 2",
+                "answer": "",
+                "alert": false,
+                "style": "danger"
+            }
+        ],
+        "x": 390,
+        "y": 700,
+        "wires": [
+            [
+                "5b9a3ce5.770404"
+            ]
+        ]
+    },
+    {
+        "id": "5b9a3ce5.770404",
+        "type": "chatbot-generic-template",
+        "z": "69df7f3e.cca47",
+        "name": "Template 3",
+        "title": "Title",
+        "subtitle": "Si come no 3",
+        "imageUrl": "",
+        "sharable": true,
+        "aspectRatio": "horizontal",
+        "buttons": [
+            {
+                "type": "postback",
+                "label": "Test 4",
+                "value": "test 4",
+                "answer": "",
+                "alert": false,
+                "style": ""
+            },
+            {
+                "type": "postback",
+                "label": "Test 2",
+                "value": "test 5",
+                "answer": "",
+                "alert": false,
+                "style": "danger"
+            }
+        ],
+        "x": 570,
+        "y": 700,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "39e9e357.74fd4c",
+        "type": "chatbot-message",
+        "z": "69df7f3e.cca47",
+        "name": "",
+        "message": [
+            ""
+        ],
+        "answer": false,
+        "x": 390,
+        "y": 1020,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "8a3363a0.c4618",
+        "type": "inject",
+        "z": "69df7f3e.cca47",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 200,
+        "y": 1020,
+        "wires": [
+            [
+                "39e9e357.74fd4c"
+            ]
+        ]
+    },
+    {
+        "id": "ef4df6c2.7d90b8",
+        "type": "chatbot-conversation",
+        "z": "69df7f3e.cca47",
+        "name": "",
+        "botTelegram": "",
+        "botSlack": "80431067.debc6",
+        "botFacebook": "",
+        "botViber": "",
+        "botUniversal": "",
+        "botTwilio": "",
+        "chatId": "D870ESPT4",
+        "transport": "slack",
+        "messageId": "",
+        "contextMessageId": false,
+        "store": "",
+        "x": 370,
+        "y": 1140,
+        "wires": [
+            [
+                "31ab809b.3573f"
+            ]
+        ]
+    },
+    {
+        "id": "31ab809b.3573f",
+        "type": "chatbot-message",
+        "z": "69df7f3e.cca47",
+        "name": "",
+        "message": [
+            {
+                "message": "I am a conversation"
+            }
+        ],
+        "answer": false,
+        "x": 510,
+        "y": 1140,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "7428504d.7eb4d",
+        "type": "inject",
+        "z": "69df7f3e.cca47",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 200,
+        "y": 1140,
+        "wires": [
+            [
+                "ef4df6c2.7d90b8"
+            ]
+        ]
+    },
+    {
+        "id": "7d68f779.426f48",
+        "type": "chatbot-dialog",
+        "z": "69df7f3e.cca47",
+        "submitLabel": "Manna",
+        "title": "I am a dialog",
+        "elements": [
+            {
+                "type": "text",
+                "label": "Label 1",
+                "name": "name1",
+                "value": "",
+                "placeholder": "Enter value 1",
+                "hint": "Dai!",
+                "optional": false
+            },
+            {
+                "type": "textarea",
+                "label": "Text area 1",
+                "name": "text2",
+                "value": "",
+                "placeholder": "Enter a long text",
+                "hint": "Long text",
+                "optional": false
+            },
+            {
+                "type": "select",
+                "label": "Select one",
+                "name": "select1",
+                "options": [
+                    {
+                        "value": "one",
+                        "label": "One"
+                    },
+                    {
+                        "value": "two",
+                        "label": "Two"
+                    },
+                    {
+                        "value": "three",
+                        "label": "Three"
+                    }
+                ]
+            }
+        ],
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "b0b3208.91a6fe",
+        "type": "chatbot-rules",
+        "z": "69df7f3e.cca47",
+        "name": "",
+        "rules": [
+            {
+                "type": "messageType",
+                "messageType": "dialog"
+            },
+            {
+                "type": "catchAll"
+            }
+        ],
+        "outputs": 2,
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "7d68f779.426f48"
+            ],
+            [
+                "bb92612c.cf558"
+            ]
+        ]
+    },
+    {
+        "id": "92e06f2.f207a9",
+        "type": "chatbot-facebook-receive",
+        "z": "69df7f3e.cca47",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "x": 130,
+        "y": 440,
+        "wires": [
+            [
+                "7fa7fcb0.df8cc4"
+            ]
+        ]
+    },
+    {
+        "id": "a4fb2443.8200e8",
+        "type": "chatbot-facebook-send",
+        "z": "69df7f3e.cca47",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "track": false,
+        "passThrough": false,
+        "outputs": 0,
+        "x": 919,
+        "y": 204,
+        "wires": []
+    },
+    {
+        "id": "2a4bdd4a.1d3d82",
+        "type": "chatbot-qrcode",
+        "z": "69df7f3e.cca47",
+        "message": "Allora barabba????",
+        "x": 387,
+        "y": 791,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "a05082ed.eaa9d",
+        "type": "function",
+        "z": "69df7f3e.cca47",
+        "name": "From docs",
+        "func": "msg.payload = {\n  sharable: true,\n  aspectRatio: 'horizontal',\n  elements: [\n    {\n      title: 'my title',\n      subtitle: 'I am a sub title',\n      imageUrl: 'https://placeimg.com/640/480/any',\n      buttons: [\n        {\n          type: 'url',\n          url: 'http://javascript-jedi.com',\n          label: 'Javascript Jedi'\n        }\n      ]\n    },\n    {\n      title: 'another title',\n      subtitle: 'Second sub title',\n      imageUrl: 'https://placeimg.com/640/480/any',\n      buttons: [\n        {\n          type: 'url',\n          url: 'http://javascript-jedi.com',\n          label: 'Javascript Jedi'\n        }\n      ]\n    }\n  ]      \n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 860,
+        "wires": [
+            [
+                "fdd87df6.c2c41"
+            ]
+        ]
+    },
+    {
+        "id": "fdd87df6.c2c41",
+        "type": "chatbot-generic-template",
+        "z": "69df7f3e.cca47",
+        "name": "",
+        "title": "",
+        "subtitle": "",
+        "imageUrl": "",
+        "sharable": true,
+        "aspectRatio": "horizontal",
+        "buttons": [],
+        "x": 610,
+        "y": 860,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    }
+]
