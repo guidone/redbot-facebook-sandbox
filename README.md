@@ -1,8 +1,8 @@
-FacebookPlayground
-==================
+# Facebook Sandbox
 
-### DEV
+Generic Facebook playground for [RedBot](https://github.com/guidone/node-red-contrib-chatbot). It's a generic bot used for testing.
 
-[Facebook control panel](https://developers.facebook.com/apps/602213973282943/dashboard/)
+To install create a new project in **Node-RED** and clone the repository:
 
-[Messenger Guidone](https://www.messenger.com/t/guidone72)
+![Clone repository](https://github.com/guidone/redbot-facebook-sandbox/blob/master/clone_sandbox.png)
+
