@@ -2,7 +2,14 @@
     {
         "id": "69df7f3e.cca47",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Generic",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "79bb377b.ed35e8",
+        "type": "tab",
+        "label": "Broadcast",
         "disabled": false,
         "info": ""
     },
@@ -501,7 +508,7 @@
         "y": 440,
         "wires": [
             [
-                "7fa7fcb0.df8cc4"
+                "a9bd9af8.faae38"
             ]
         ]
     },
@@ -563,6 +570,893 @@
         "wires": [
             [
                 "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "c8311c31.26e89",
+        "type": "inject",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "a38f308b.5f26a"
+            ]
+        ]
+    },
+    {
+        "id": "95057b13.63bcf8",
+        "type": "chatbot-message",
+        "z": "79bb377b.ed35e8",
+        "name": "A message",
+        "message": [
+            {
+                "message": "Ciao {{first_name}}, Message ... bdroacasted"
+            }
+        ],
+        "answer": false,
+        "silent": false,
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "9a4e1ca7.959bf"
+            ]
+        ]
+    },
+    {
+        "id": "9a4e1ca7.959bf",
+        "type": "chatbot-broadcast",
+        "z": "79bb377b.ed35e8",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "command": "store",
+        "broadcastId": "",
+        "messageId": "",
+        "notificationType": "REGULAR",
+        "messagingType": "",
+        "x": 620,
+        "y": 140,
+        "wires": [
+            [
+                "a011bed6.0c905"
+            ]
+        ]
+    },
+    {
+        "id": "a38f308b.5f26a",
+        "type": "chatbot-conversation",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "botTelegram": "",
+        "botSlack": "",
+        "botFacebook": "96154901.613728",
+        "botViber": "",
+        "botUniversal": "",
+        "botTwilio": "",
+        "chatId": "",
+        "transport": "facebook",
+        "messageId": "",
+        "contextMessageId": false,
+        "store": "",
+        "x": 270,
+        "y": 140,
+        "wires": [
+            [
+                "95057b13.63bcf8"
+            ]
+        ]
+    },
+    {
+        "id": "a011bed6.0c905",
+        "type": "chatbot-facebook-send",
+        "z": "79bb377b.ed35e8",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "track": false,
+        "passThrough": true,
+        "outputs": 1,
+        "x": 830,
+        "y": 140,
+        "wires": [
+            [
+                "a2add2c4.5e81"
+            ]
+        ]
+    },
+    {
+        "id": "1e87f42.0d3430c",
+        "type": "chatbot-broadcast",
+        "z": "79bb377b.ed35e8",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "command": "metrics",
+        "broadcastId": "270668720259903",
+        "messageId": "270668720259903",
+        "x": 360,
+        "y": 420,
+        "wires": [
+            [
+                "34ecb7a1.06d7c8"
+            ]
+        ]
+    },
+    {
+        "id": "9f1af922.223d18",
+        "type": "inject",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 420,
+        "wires": [
+            [
+                "1e87f42.0d3430c"
+            ]
+        ]
+    },
+    {
+        "id": "34ecb7a1.06d7c8",
+        "type": "debug",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 590,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a1fca28b.5905d",
+        "type": "chatbot-generic-template",
+        "z": "79bb377b.ed35e8",
+        "name": "Template 1",
+        "title": "Title",
+        "subtitle": "This is a subtitle",
+        "imageUrl": "https://placeimg.com/640/480/any",
+        "sharable": true,
+        "aspectRatio": "horizontal",
+        "buttons": [
+            {
+                "type": "postback",
+                "label": "Test 1",
+                "value": "test 1",
+                "answer": "",
+                "alert": false,
+                "style": ""
+            },
+            {
+                "type": "postback",
+                "label": "Test 2",
+                "value": "test 2",
+                "answer": "",
+                "alert": false,
+                "style": "danger"
+            }
+        ],
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [
+                "40002231.88da1c"
+            ]
+        ]
+    },
+    {
+        "id": "af7b4e1b.eea11",
+        "type": "chatbot-conversation",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "botTelegram": "",
+        "botTelegramProduction": "",
+        "botSlack": "",
+        "botSlackProduction": "80431067.debc6",
+        "botFacebook": "96154901.613728",
+        "botFacebookProduction": "",
+        "botViber": "",
+        "botViberProduction": "",
+        "botUniversal": "",
+        "botUniversalProduction": "",
+        "botTwilio": "",
+        "botTwilioProduction": "",
+        "chatId": "",
+        "transport": "facebook",
+        "messageId": "",
+        "contextMessageId": false,
+        "store": "",
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "a1fca28b.5905d"
+            ]
+        ]
+    },
+    {
+        "id": "7937a536.1c54fc",
+        "type": "inject",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 280,
+        "wires": [
+            [
+                "af7b4e1b.eea11"
+            ]
+        ]
+    },
+    {
+        "id": "a9bd9af8.faae38",
+        "type": "chatbot-list-template",
+        "z": "69df7f3e.cca47",
+        "name": "List Template 1",
+        "title": "JJ",
+        "subtitle": "Allora barabba",
+        "imageUrl": "https://placeimg.com/640/480/any",
+        "sharable": true,
+        "topElementStyle": "large",
+        "buttons": [
+            {
+                "type": "postback",
+                "label": "Yesy",
+                "value": "/yes",
+                "alert": false
+            }
+        ],
+        "x": 400,
+        "y": 940,
+        "wires": [
+            [
+                "d1ce4516.a44c58"
+            ]
+        ]
+    },
+    {
+        "id": "d1ce4516.a44c58",
+        "type": "chatbot-list-template",
+        "z": "69df7f3e.cca47",
+        "name": "List Template 2",
+        "title": "AAA",
+        "subtitle": "Quindi",
+        "imageUrl": "https://placeimg.com/641/480/any",
+        "sharable": true,
+        "topElementStyle": "large",
+        "buttons": [
+            {
+                "type": "url",
+                "label": "Open",
+                "url": "http://javascript-jedi.com",
+                "webViewHeightRatio": "tall",
+                "extensions": false,
+                "alert": false
+            }
+        ],
+        "x": 780,
+        "y": 940,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "d65b1811.b7eeb8",
+        "type": "chatbot-list-template",
+        "z": "79bb377b.ed35e8",
+        "name": "List Template 1",
+        "title": "I am a template",
+        "subtitle": "Subtle subtitle",
+        "imageUrl": "https://placeimg.com/640/480/any",
+        "sharable": true,
+        "topElementStyle": "large",
+        "buttons": [
+            {
+                "type": "postback",
+                "label": "Yesy",
+                "value": "/yes",
+                "alert": false
+            }
+        ],
+        "x": 500,
+        "y": 540,
+        "wires": [
+            [
+                "751a9d86.421654"
+            ]
+        ]
+    },
+    {
+        "id": "751a9d86.421654",
+        "type": "chatbot-list-template",
+        "z": "79bb377b.ed35e8",
+        "name": "List Template 2",
+        "title": "Title again",
+        "subtitle": "Subtle subtitle 2",
+        "imageUrl": "https://placeimg.com/641/480/any",
+        "sharable": true,
+        "topElementStyle": "large",
+        "buttons": [
+            {
+                "type": "url",
+                "label": "Open",
+                "url": "http://javascript-jedi.com",
+                "webViewHeightRatio": "tall",
+                "extensions": false,
+                "alert": false
+            }
+        ],
+        "x": 740,
+        "y": 540,
+        "wires": [
+            [
+                "a24f31c5.81354"
+            ]
+        ]
+    },
+    {
+        "id": "9415b1da.1c31e",
+        "type": "inject",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 540,
+        "wires": [
+            [
+                "30afe28d.1be0de"
+            ]
+        ]
+    },
+    {
+        "id": "30afe28d.1be0de",
+        "type": "chatbot-conversation",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "botTelegram": "",
+        "botSlack": "",
+        "botFacebook": "96154901.613728",
+        "botViber": "",
+        "botUniversal": "",
+        "botTwilio": "",
+        "chatId": "",
+        "transport": "facebook",
+        "messageId": "",
+        "contextMessageId": false,
+        "store": "",
+        "x": 290,
+        "y": 540,
+        "wires": [
+            [
+                "d65b1811.b7eeb8"
+            ]
+        ]
+    },
+    {
+        "id": "a2add2c4.5e81",
+        "type": "debug",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1010,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d8271277.0fa6d",
+        "type": "inject",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 700,
+        "wires": [
+            [
+                "261aba7a.2fa8e6"
+            ]
+        ]
+    },
+    {
+        "id": "261aba7a.2fa8e6",
+        "type": "chatbot-conversation",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "botTelegram": "",
+        "botSlack": "",
+        "botFacebook": "96154901.613728",
+        "botViber": "",
+        "botUniversal": "",
+        "botTwilio": "",
+        "chatId": "",
+        "transport": "facebook",
+        "messageId": "",
+        "contextMessageId": false,
+        "store": "",
+        "x": 290,
+        "y": 700,
+        "wires": [
+            [
+                "a38d549e.0f8928"
+            ]
+        ]
+    },
+    {
+        "id": "33ce9eff.eb4312",
+        "type": "chatbot-broadcast",
+        "z": "79bb377b.ed35e8",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "command": "store",
+        "broadcastId": "",
+        "messageId": "",
+        "notificationType": "REGULAR",
+        "messagingType": "",
+        "x": 700,
+        "y": 700,
+        "wires": [
+            [
+                "7b0738e9.e3af48"
+            ]
+        ]
+    },
+    {
+        "id": "a38d549e.0f8928",
+        "type": "chatbot-message",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "message": [
+            {
+                "message": "Ciao {{first_name}}, Message ... bdroacasted"
+            }
+        ],
+        "answer": false,
+        "silent": false,
+        "x": 470,
+        "y": 700,
+        "wires": [
+            [
+                "33ce9eff.eb4312"
+            ]
+        ]
+    },
+    {
+        "id": "7b0738e9.e3af48",
+        "type": "chatbot-broadcast",
+        "z": "79bb377b.ed35e8",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "command": "schedule",
+        "broadcastId": "",
+        "messageId": "",
+        "notificationType": "REGULAR",
+        "messagingType": "",
+        "sendAt": "2018-11-25T14:15:00.000Z",
+        "x": 990,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b5dd210.af449",
+        "type": "chatbot-broadcast",
+        "z": "79bb377b.ed35e8",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "command": "list",
+        "broadcastId": "",
+        "messageId": "",
+        "notificationType": "REGULAR",
+        "messagingType": "",
+        "sendAt": "",
+        "x": 330,
+        "y": 820,
+        "wires": [
+            [
+                "fcaa8b12.702848"
+            ]
+        ]
+    },
+    {
+        "id": "bcdea4b1.face48",
+        "type": "inject",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 820,
+        "wires": [
+            [
+                "8b5dd210.af449"
+            ]
+        ]
+    },
+    {
+        "id": "fcaa8b12.702848",
+        "type": "debug",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 550,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "f6d66510.733198",
+        "type": "chatbot-broadcast",
+        "z": "79bb377b.ed35e8",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "command": "status",
+        "broadcastId": "343512269742772",
+        "messageId": "",
+        "notificationType": "REGULAR",
+        "messagingType": "",
+        "sendAt": "",
+        "x": 340,
+        "y": 960,
+        "wires": [
+            [
+                "2c9eebd6.cb0a04"
+            ]
+        ]
+    },
+    {
+        "id": "dd2781d7.fc96b",
+        "type": "inject",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 960,
+        "wires": [
+            [
+                "f6d66510.733198"
+            ]
+        ]
+    },
+    {
+        "id": "2c9eebd6.cb0a04",
+        "type": "debug",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "b900dfc0.f9da7",
+        "type": "comment",
+        "z": "79bb377b.ed35e8",
+        "name": "broadcastId",
+        "info": "",
+        "x": 1170,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "40002231.88da1c",
+        "type": "chatbot-broadcast",
+        "z": "79bb377b.ed35e8",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "command": "store",
+        "broadcastId": "",
+        "messageId": "",
+        "notificationType": "REGULAR",
+        "messagingType": "",
+        "x": 720,
+        "y": 280,
+        "wires": [
+            [
+                "163019fa.8d7006"
+            ]
+        ]
+    },
+    {
+        "id": "163019fa.8d7006",
+        "type": "chatbot-facebook-send",
+        "z": "79bb377b.ed35e8",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "track": false,
+        "passThrough": true,
+        "outputs": 1,
+        "x": 990,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a24f31c5.81354",
+        "type": "chatbot-broadcast",
+        "z": "79bb377b.ed35e8",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "command": "store",
+        "broadcastId": "",
+        "messageId": "",
+        "notificationType": "REGULAR",
+        "messagingType": "",
+        "x": 1000,
+        "y": 540,
+        "wires": [
+            [
+                "c76f5630.576d38"
+            ]
+        ]
+    },
+    {
+        "id": "c76f5630.576d38",
+        "type": "chatbot-facebook-send",
+        "z": "79bb377b.ed35e8",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "track": false,
+        "passThrough": true,
+        "outputs": 1,
+        "x": 1250,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1805d156.3af14f",
+        "type": "comment",
+        "z": "79bb377b.ed35e8",
+        "name": "Message metrics",
+        "info": "",
+        "x": 120,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b225ba73.1a5e08",
+        "type": "comment",
+        "z": "79bb377b.ed35e8",
+        "name": "Broadcast generic template",
+        "info": "",
+        "x": 160,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "48db9f10.516fd",
+        "type": "comment",
+        "z": "79bb377b.ed35e8",
+        "name": "Broadcast text message",
+        "info": "",
+        "x": 150,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "83c5574c.c0d7a8",
+        "type": "comment",
+        "z": "79bb377b.ed35e8",
+        "name": "Broadcast list template",
+        "info": "",
+        "x": 140,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "92ac54b.c4711a8",
+        "type": "comment",
+        "z": "79bb377b.ed35e8",
+        "name": "Broadcast schedule",
+        "info": "",
+        "x": 130,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "c1e2b369.4a5d4",
+        "type": "comment",
+        "z": "79bb377b.ed35e8",
+        "name": "Broadcast schedule list",
+        "info": "",
+        "x": 140,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "fce78d19.303c",
+        "type": "comment",
+        "z": "79bb377b.ed35e8",
+        "name": "Broadcast status",
+        "info": "",
+        "x": 120,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "3ad2086e.5a0258",
+        "type": "inject",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 1120,
+        "wires": [
+            [
+                "29be2c1f.ceea94"
+            ]
+        ]
+    },
+    {
+        "id": "29be2c1f.ceea94",
+        "type": "chatbot-conversation",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "botTelegram": "",
+        "botSlack": "",
+        "botFacebook": "96154901.613728",
+        "botViber": "",
+        "botUniversal": "",
+        "botTwilio": "",
+        "chatId": "",
+        "transport": "facebook",
+        "messageId": "",
+        "contextMessageId": false,
+        "store": "",
+        "x": 310,
+        "y": 1120,
+        "wires": [
+            [
+                "f81f14ff.0d2058"
+            ]
+        ]
+    },
+    {
+        "id": "56d322d5.f9f19c",
+        "type": "chatbot-broadcast",
+        "z": "79bb377b.ed35e8",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "command": "store",
+        "broadcastId": "",
+        "messageId": "",
+        "notificationType": "REGULAR",
+        "messagingType": "",
+        "x": 780,
+        "y": 1120,
+        "wires": [
+            [
+                "c9539b8e.a97bb8"
+            ]
+        ]
+    },
+    {
+        "id": "c9539b8e.a97bb8",
+        "type": "chatbot-facebook-send",
+        "z": "79bb377b.ed35e8",
+        "bot": "96154901.613728",
+        "botProduction": "",
+        "track": false,
+        "passThrough": true,
+        "outputs": 1,
+        "x": 1030,
+        "y": 1120,
+        "wires": [
+            [
+                "4539a5a5.69eadc"
+            ]
+        ]
+    },
+    {
+        "id": "4539a5a5.69eadc",
+        "type": "debug",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1250,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "f81f14ff.0d2058",
+        "type": "chatbot-inline-buttons",
+        "z": "79bb377b.ed35e8",
+        "name": "",
+        "buttons": [
+            {
+                "type": "postback",
+                "label": "Button 1",
+                "value": "button 1",
+                "answer": "",
+                "alert": false,
+                "style": ""
+            },
+            {
+                "type": "url",
+                "label": "Open Url",
+                "url": "http://www.javascript-jedi.com",
+                "webViewHeightRatio": "tall",
+                "extensions": false,
+                "answer": "",
+                "alert": false
+            }
+        ],
+        "message": "Message with buttons",
+        "x": 540,
+        "y": 1120,
+        "wires": [
+            [
+                "56d322d5.f9f19c"
             ]
         ]
     }
