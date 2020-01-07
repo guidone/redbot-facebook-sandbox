@@ -57,7 +57,9 @@
         "usernames": "",
         "store": "2f7f54d8.3f7f5c",
         "log": "",
-        "debug": false
+        "debug": true,
+        "multiWebHook": true,
+        "profileFields": ""
     },
     {
         "id": "d379564f.449768",
@@ -201,7 +203,6 @@
         "type": "chatbot-audio",
         "z": "69df7f3e.cca47",
         "name": "",
-        "filename": "/web/cacca.mp3",
         "track": false,
         "x": 389,
         "y": 548,
@@ -361,16 +362,8 @@
         "type": "chatbot-conversation",
         "z": "69df7f3e.cca47",
         "name": "",
-        "botTelegram": "",
-        "botSlack": "80431067.debc6",
-        "botFacebook": "",
-        "botViber": "",
-        "botUniversal": "",
-        "botTwilio": "",
         "chatId": "D870ESPT4",
         "transport": "slack",
-        "messageId": "",
-        "contextMessageId": false,
         "store": "",
         "x": 370,
         "y": 1140,
@@ -508,7 +501,7 @@
         "y": 440,
         "wires": [
             [
-                "a9bd9af8.faae38"
+                "1cfca8db.89f7b7"
             ]
         ]
     },
@@ -637,16 +630,8 @@
         "type": "chatbot-conversation",
         "z": "79bb377b.ed35e8",
         "name": "",
-        "botTelegram": "",
-        "botSlack": "",
-        "botFacebook": "96154901.613728",
-        "botViber": "",
-        "botUniversal": "",
-        "botTwilio": "",
         "chatId": "",
         "transport": "facebook",
-        "messageId": "",
-        "contextMessageId": false,
         "store": "",
         "x": 270,
         "y": 140,
@@ -765,22 +750,8 @@
         "type": "chatbot-conversation",
         "z": "79bb377b.ed35e8",
         "name": "",
-        "botTelegram": "",
-        "botTelegramProduction": "",
-        "botSlack": "",
-        "botSlackProduction": "80431067.debc6",
-        "botFacebook": "96154901.613728",
-        "botFacebookProduction": "",
-        "botViber": "",
-        "botViberProduction": "",
-        "botUniversal": "",
-        "botUniversalProduction": "",
-        "botTwilio": "",
-        "botTwilioProduction": "",
         "chatId": "",
         "transport": "facebook",
-        "messageId": "",
-        "contextMessageId": false,
         "store": "",
         "x": 290,
         "y": 280,
@@ -943,16 +914,8 @@
         "type": "chatbot-conversation",
         "z": "79bb377b.ed35e8",
         "name": "",
-        "botTelegram": "",
-        "botSlack": "",
-        "botFacebook": "96154901.613728",
-        "botViber": "",
-        "botUniversal": "",
-        "botTwilio": "",
         "chatId": "",
         "transport": "facebook",
-        "messageId": "",
-        "contextMessageId": false,
         "store": "",
         "x": 290,
         "y": 540,
@@ -1001,16 +964,8 @@
         "type": "chatbot-conversation",
         "z": "79bb377b.ed35e8",
         "name": "",
-        "botTelegram": "",
-        "botSlack": "",
-        "botFacebook": "96154901.613728",
-        "botViber": "",
-        "botUniversal": "",
-        "botTwilio": "",
         "chatId": "",
         "transport": "facebook",
-        "messageId": "",
-        "contextMessageId": false,
         "store": "",
         "x": 290,
         "y": 700,
@@ -1358,16 +1313,8 @@
         "type": "chatbot-conversation",
         "z": "79bb377b.ed35e8",
         "name": "",
-        "botTelegram": "",
-        "botSlack": "",
-        "botFacebook": "96154901.613728",
-        "botViber": "",
-        "botUniversal": "",
-        "botTwilio": "",
         "chatId": "",
         "transport": "facebook",
-        "messageId": "",
-        "contextMessageId": false,
         "store": "",
         "x": 310,
         "y": 1120,
@@ -1457,6 +1404,34 @@
         "wires": [
             [
                 "56d322d5.f9f19c"
+            ]
+        ]
+    },
+    {
+        "id": "1cfca8db.89f7b7",
+        "type": "chatbot-quick-replies",
+        "z": "69df7f3e.cca47",
+        "name": "",
+        "message": "Test",
+        "buttons": [
+            {
+                "type": "quick-reply",
+                "label": "One {{chatId}}",
+                "value": "one",
+                "url": ""
+            },
+            {
+                "type": "quick-reply",
+                "label": "Two",
+                "value": "two",
+                "url": ""
+            }
+        ],
+        "x": 400,
+        "y": 740,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
             ]
         ]
     }
