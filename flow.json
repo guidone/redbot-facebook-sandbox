@@ -16,7 +16,6 @@
     {
         "id": "80431067.debc6",
         "type": "chatbot-slack-node",
-        "z": "",
         "botname": "Guidone_bot",
         "usernames": "",
         "store": "2f7f54d8.3f7f5c",
@@ -26,7 +25,6 @@
     {
         "id": "2f7f54d8.3f7f5c",
         "type": "chatbot-context-store",
-        "z": "",
         "name": "memory",
         "contextStorage": "memory",
         "contextParams": ""
@@ -34,7 +32,6 @@
     {
         "id": "2384468e.a9cfaa",
         "type": "chatbot-slack-node",
-        "z": "",
         "botname": "Guidone_bot",
         "usernames": "",
         "store": "3fd53775.38e008",
@@ -44,7 +41,6 @@
     {
         "id": "3fd53775.38e008",
         "type": "chatbot-context-store",
-        "z": "",
         "name": "memory",
         "contextStorage": "memory",
         "contextParams": ""
@@ -52,13 +48,12 @@
     {
         "id": "96154901.613728",
         "type": "chatbot-facebook-node",
-        "z": "",
         "botname": "Dacebook DEV",
         "usernames": "",
         "store": "2f7f54d8.3f7f5c",
         "log": "",
         "debug": true,
-        "multiWebHook": true,
+        "multiWebHook": false,
         "profileFields": ""
     },
     {
@@ -71,7 +66,6 @@
                 "message": "test"
             }
         ],
-        "answer": false,
         "x": 390,
         "y": 180,
         "wires": [
@@ -190,8 +184,8 @@
         "latitude": "43",
         "longitude": "21",
         "place": "Bologna",
-        "x": 358,
-        "y": 487,
+        "x": 370,
+        "y": 500,
         "wires": [
             [
                 "a4fb2443.8200e8"
@@ -204,8 +198,8 @@
         "z": "69df7f3e.cca47",
         "name": "",
         "track": false,
-        "x": 389,
-        "y": 548,
+        "x": 370,
+        "y": 540,
         "wires": [
             [
                 "a4fb2443.8200e8"
@@ -241,7 +235,7 @@
             }
         ],
         "x": 390,
-        "y": 620,
+        "y": 580,
         "wires": [
             [
                 "a4fb2443.8200e8"
@@ -277,7 +271,7 @@
             }
         ],
         "x": 390,
-        "y": 700,
+        "y": 620,
         "wires": [
             [
                 "5b9a3ce5.770404"
@@ -312,8 +306,8 @@
                 "style": "danger"
             }
         ],
-        "x": 570,
-        "y": 700,
+        "x": 550,
+        "y": 620,
         "wires": [
             [
                 "a4fb2443.8200e8"
@@ -328,9 +322,8 @@
         "message": [
             ""
         ],
-        "answer": false,
-        "x": 390,
-        "y": 1020,
+        "x": 570,
+        "y": 1520,
         "wires": [
             [
                 "a4fb2443.8200e8"
@@ -342,15 +335,15 @@
         "type": "inject",
         "z": "69df7f3e.cca47",
         "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 200,
-        "y": 1020,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 380,
+        "y": 1520,
         "wires": [
             [
                 "39e9e357.74fd4c"
@@ -365,8 +358,8 @@
         "chatId": "D870ESPT4",
         "transport": "slack",
         "store": "",
-        "x": 370,
-        "y": 1140,
+        "x": 530,
+        "y": 1560,
         "wires": [
             [
                 "31ab809b.3573f"
@@ -383,9 +376,8 @@
                 "message": "I am a conversation"
             }
         ],
-        "answer": false,
-        "x": 510,
-        "y": 1140,
+        "x": 670,
+        "y": 1560,
         "wires": [
             [
                 "a4fb2443.8200e8"
@@ -397,15 +389,15 @@
         "type": "inject",
         "z": "69df7f3e.cca47",
         "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 200,
-        "y": 1140,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 360,
+        "y": 1560,
         "wires": [
             [
                 "ef4df6c2.7d90b8"
@@ -501,7 +493,7 @@
         "y": 440,
         "wires": [
             [
-                "1cfca8db.89f7b7"
+                "e451775d1feac4cd"
             ]
         ]
     },
@@ -571,13 +563,13 @@
         "type": "inject",
         "z": "79bb377b.ed35e8",
         "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
         "x": 120,
         "y": 140,
         "wires": [
@@ -596,8 +588,6 @@
                 "message": "Ciao {{first_name}}, Message ... bdroacasted"
             }
         ],
-        "answer": false,
-        "silent": false,
         "x": 430,
         "y": 140,
         "wires": [
@@ -680,13 +670,13 @@
         "type": "inject",
         "z": "79bb377b.ed35e8",
         "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
         "x": 120,
         "y": 420,
         "wires": [
@@ -766,72 +756,18 @@
         "type": "inject",
         "z": "79bb377b.ed35e8",
         "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
         "x": 120,
         "y": 280,
         "wires": [
             [
                 "af7b4e1b.eea11"
-            ]
-        ]
-    },
-    {
-        "id": "a9bd9af8.faae38",
-        "type": "chatbot-list-template",
-        "z": "69df7f3e.cca47",
-        "name": "List Template 1",
-        "title": "JJ",
-        "subtitle": "Allora barabba",
-        "imageUrl": "https://placeimg.com/640/480/any",
-        "sharable": true,
-        "topElementStyle": "large",
-        "buttons": [
-            {
-                "type": "postback",
-                "label": "Yesy",
-                "value": "/yes",
-                "alert": false
-            }
-        ],
-        "x": 400,
-        "y": 940,
-        "wires": [
-            [
-                "d1ce4516.a44c58"
-            ]
-        ]
-    },
-    {
-        "id": "d1ce4516.a44c58",
-        "type": "chatbot-list-template",
-        "z": "69df7f3e.cca47",
-        "name": "List Template 2",
-        "title": "AAA",
-        "subtitle": "Quindi",
-        "imageUrl": "https://placeimg.com/641/480/any",
-        "sharable": true,
-        "topElementStyle": "large",
-        "buttons": [
-            {
-                "type": "url",
-                "label": "Open",
-                "url": "http://javascript-jedi.com",
-                "webViewHeightRatio": "tall",
-                "extensions": false,
-                "alert": false
-            }
-        ],
-        "x": 780,
-        "y": 940,
-        "wires": [
-            [
-                "a4fb2443.8200e8"
             ]
         ]
     },
@@ -894,13 +830,13 @@
         "type": "inject",
         "z": "79bb377b.ed35e8",
         "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
         "x": 120,
         "y": 540,
         "wires": [
@@ -944,13 +880,13 @@
         "type": "inject",
         "z": "79bb377b.ed35e8",
         "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
         "x": 120,
         "y": 700,
         "wires": [
@@ -1004,8 +940,6 @@
                 "message": "Ciao {{first_name}}, Message ... bdroacasted"
             }
         ],
-        "answer": false,
-        "silent": false,
         "x": 470,
         "y": 700,
         "wires": [
@@ -1057,13 +991,13 @@
         "type": "inject",
         "z": "79bb377b.ed35e8",
         "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
         "x": 120,
         "y": 820,
         "wires": [
@@ -1111,13 +1045,13 @@
         "type": "inject",
         "z": "79bb377b.ed35e8",
         "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
         "x": 120,
         "y": 960,
         "wires": [
@@ -1293,13 +1227,13 @@
         "type": "inject",
         "z": "79bb377b.ed35e8",
         "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
         "x": 120,
         "y": 1120,
         "wires": [
@@ -1416,15 +1350,17 @@
         "buttons": [
             {
                 "type": "quick-reply",
-                "label": "One {{chatId}}",
-                "value": "one",
+                "label": "222",
+                "value": "222",
                 "url": ""
             },
             {
-                "type": "quick-reply",
-                "label": "Two",
-                "value": "two",
-                "url": ""
+                "type": "phone",
+                "label": "your number"
+            },
+            {
+                "type": "email",
+                "label": "Email"
             }
         ],
         "x": 400,
@@ -1432,6 +1368,309 @@
         "wires": [
             [
                 "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "9d1116936fed52e0",
+        "type": "chatbot-messenger-template",
+        "z": "69df7f3e.cca47",
+        "name": "Generic",
+        "templateType": "generic",
+        "text": "",
+        "json": "",
+        "title": "Title generic",
+        "subtitle": "subtitle generic",
+        "imageUrl": "",
+        "mediaUrl": "",
+        "attachmentId": "",
+        "productId": "",
+        "buttons": [
+            {
+                "type": "postback",
+                "label": "One",
+                "value": "one",
+                "answer": "",
+                "alert": false,
+                "style": ""
+            },
+            {
+                "type": "postback",
+                "label": "Two",
+                "value": "two",
+                "answer": "",
+                "alert": false,
+                "style": ""
+            }
+        ],
+        "x": 380,
+        "y": 900,
+        "wires": [
+            [
+                "57dcd0922bf2544b"
+            ]
+        ]
+    },
+    {
+        "id": "901df54fa41c9d54",
+        "type": "chatbot-params",
+        "z": "69df7f3e.cca47",
+        "name": "",
+        "params": [
+            {
+                "platform": "facebook",
+                "name": "aspectRatio",
+                "value": "square"
+            }
+        ],
+        "outputs": 1,
+        "x": 720,
+        "y": 900,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "57dcd0922bf2544b",
+        "type": "chatbot-messenger-template",
+        "z": "69df7f3e.cca47",
+        "name": "Generic 2",
+        "templateType": "generic",
+        "text": "A button",
+        "json": "",
+        "title": "Title generic 2",
+        "subtitle": "subtitle generic 2",
+        "imageUrl": "",
+        "mediaUrl": "",
+        "attachmentId": "",
+        "productId": "",
+        "buttons": [
+            {
+                "type": "url",
+                "label": "Open",
+                "url": "http://www.google.it",
+                "webViewHeightRatio": "tall",
+                "extensions": false,
+                "alert": false
+            }
+        ],
+        "x": 540,
+        "y": 900,
+        "wires": [
+            [
+                "901df54fa41c9d54"
+            ]
+        ]
+    },
+    {
+        "id": "ba9cc31487fe0a3c",
+        "type": "chatbot-messenger-template",
+        "z": "69df7f3e.cca47",
+        "name": "Receipt demo",
+        "templateType": "receipt",
+        "text": "",
+        "json": "{\n    \"recipient_name\": \"Stephane Crozatier\",\n    \"order_number\": \"12345678902\",\n    \"currency\": \"USD\",\n    \"payment_method\": \"Visa 2345\",\n    \"order_url\": \"http://petersapparel.parseapp.com/order?order_id=123456\",\n    \"timestamp\": \"1428444852\",\n    \"address\": {\n        \"street_1\": \"1 Hacker Way\",\n        \"street_2\": \"\",\n        \"city\": \"Menlo Park\",\n        \"postal_code\": \"94025\",\n        \"state\": \"CA\",\n        \"country\": \"US\"\n    },\n    \"summary\": {\n        \"subtotal\": 75.00,\n        \"shipping_cost\": 4.95,\n        \"total_tax\": 6.19,\n        \"total_cost\": 56.14\n    },\n    \"adjustments\": [\n        {\n            \"name\": \"New Customer Discount\",\n            \"amount\": 20\n        },\n        {\n            \"name\": \"$10 Off Coupon\",\n            \"amount\": 10\n        }\n    ],\n    \"elements\": [\n        {\n            \"title\": \"Classic White T-Shirt\",\n            \"subtitle\": \"100% Soft and Luxurious Cotton\",\n            \"quantity\": 2,\n            \"price\": 50,\n            \"currency\": \"USD\",\n            \"image_url\": \"http://petersapparel.parseapp.com/img/whiteshirt.png\"\n        },\n        {\n            \"title\": \"Classic Gray T-Shirt\",\n            \"subtitle\": \"100% Soft and Luxurious Cotton\",\n            \"quantity\": 1,\n            \"price\": 25,\n            \"currency\": \"USD\",\n            \"image_url\": \"http://petersapparel.parseapp.com/img/grayshirt.png\"\n        }\n    ]\n}",
+        "title": "Title generic 2",
+        "subtitle": "subtitle generic 2",
+        "imageUrl": "",
+        "buttons": [
+            {
+                "type": "url",
+                "label": "Open",
+                "url": "http://www.google.it",
+                "webViewHeightRatio": "tall",
+                "extensions": false,
+                "alert": false
+            }
+        ],
+        "x": 400,
+        "y": 1020,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "e451775d1feac4cd",
+        "type": "chatbot-messenger-template",
+        "z": "69df7f3e.cca47",
+        "name": "Customer feedback",
+        "templateType": "customer_feedback",
+        "text": "",
+        "json": "{\n    \"title\": \"Rate your experience with Original Coast Clothing.\", \n    \"subtitle\": \"Let Original Coast Clothing know how they are doing by answering two questions\",\n    \"button_title\": \"Rate Experience\",  \n    \"feedback_screens\": [\n        {\n            \"questions\": [\n                {\n                    \"id\": \"hauydmns8\", \n                    \"type\": \"csat\",\n                    \"title\": \"How would you rate your experience with Original Coast Clothing?\", \n                    \"score_label\": \"neg_pos\", \n                    \"score_option\": \"five_stars\",\n                    \"follow_up\":  \n                    {\n                        \"type\": \"free_form\",\n                        \"placeholder\": \"Give additional feedback\"\n                    }\n                }\n            ]\n        }\n    ],\n    \"business_privacy\": {\n        \"url\": \"https://www.example.com\"\n    },\n    \"expires_in_days\": 3\n}\n",
+        "title": "",
+        "subtitle": "",
+        "imageUrl": "",
+        "buttons": [],
+        "x": 410,
+        "y": 1060,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "ed251a99a089e051",
+        "type": "chatbot-messenger-template",
+        "z": "69df7f3e.cca47",
+        "name": "Media image",
+        "templateType": "media",
+        "text": "",
+        "json": "",
+        "title": "",
+        "subtitle": "",
+        "imageUrl": "",
+        "mediaUrl": "https://www.facebook.com/watch/?v=284974132939774",
+        "mediaType": "video",
+        "attachmentId": "",
+        "buttons": [
+            {
+                "type": "postback",
+                "label": "Ok!",
+                "value": "ok",
+                "answer": "",
+                "alert": false,
+                "style": ""
+            }
+        ],
+        "x": 390,
+        "y": 1100,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "4afee356f9f8b26a",
+        "type": "chatbot-messenger-template",
+        "z": "69df7f3e.cca47",
+        "name": "Product",
+        "templateType": "product",
+        "text": "",
+        "json": "",
+        "title": "",
+        "subtitle": "",
+        "imageUrl": "",
+        "mediaUrl": "",
+        "mediaType": "video",
+        "attachmentId": "",
+        "productId": "123",
+        "buttons": [],
+        "x": 380,
+        "y": 1140,
+        "wires": [
+            [
+                "6b74aa15cf25f1f4"
+            ]
+        ]
+    },
+    {
+        "id": "6b74aa15cf25f1f4",
+        "type": "chatbot-messenger-template",
+        "z": "69df7f3e.cca47",
+        "name": "Product",
+        "templateType": "product",
+        "text": "",
+        "json": "",
+        "title": "",
+        "subtitle": "",
+        "imageUrl": "",
+        "mediaUrl": "",
+        "mediaType": "video",
+        "attachmentId": "",
+        "productId": "456",
+        "buttons": [],
+        "x": 520,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "70ae73def31d403e",
+        "type": "chatbot-messenger-template",
+        "z": "69df7f3e.cca47",
+        "name": "Button 1",
+        "templateType": "button",
+        "text": "A button One",
+        "json": "",
+        "title": "Title generic 2",
+        "subtitle": "subtitle generic 2",
+        "imageUrl": "",
+        "mediaUrl": "",
+        "attachmentId": "",
+        "productId": "",
+        "buttons": [
+            {
+                "type": "url",
+                "label": "Open",
+                "url": "http://www.google.it",
+                "webViewHeightRatio": "tall",
+                "extensions": false,
+                "alert": false
+            }
+        ],
+        "x": 380,
+        "y": 960,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "d9b89d970b3800cf",
+        "type": "chatbot-messenger-template",
+        "z": "69df7f3e.cca47",
+        "name": "Receipt demo",
+        "templateType": "receipt",
+        "text": "",
+        "json": "",
+        "title": "Title generic 2",
+        "subtitle": "subtitle generic 2",
+        "imageUrl": "",
+        "mediaUrl": "",
+        "attachmentId": "",
+        "productId": "",
+        "buttons": [
+            {
+                "type": "url",
+                "label": "Open",
+                "url": "http://www.google.it",
+                "webViewHeightRatio": "tall",
+                "extensions": false,
+                "alert": false
+            }
+        ],
+        "x": 560,
+        "y": 1200,
+        "wires": [
+            [
+                "a4fb2443.8200e8"
+            ]
+        ]
+    },
+    {
+        "id": "dfa45d51fead522c",
+        "type": "function",
+        "z": "69df7f3e.cca47",
+        "name": "",
+        "func": "msg.json = {\n    \"recipient_name\": \"Stephane Crozatier\",\n    \"order_number\": \"12345678902\",\n    \"currency\": \"USD\",\n    \"payment_method\": \"Visa 2345\",\n    \"order_url\": \"http://petersapparel.parseapp.com/order?order_id=123456\",\n    \"timestamp\": \"1428444852\",\n    \"address\": {\n        \"street_1\": \"1 Hacker Way\",\n        \"street_2\": \"\",\n        \"city\": \"Menlo Park\",\n        \"postal_code\": \"94025\",\n        \"state\": \"CA\",\n        \"country\": \"US\"\n    },\n    \"summary\": {\n        \"subtotal\": 75.00,\n        \"shipping_cost\": 4.95,\n        \"total_tax\": 6.19,\n        \"total_cost\": 56.14\n    },\n    \"adjustments\": [\n        {\n            \"name\": \"New Customer Discount\",\n            \"amount\": 20\n        },\n        {\n            \"name\": \"$10 Off Coupon\",\n            \"amount\": 10\n        }\n    ],\n    \"elements\": [\n        {\n            \"title\": \"Classic White T-Shirt\",\n            \"subtitle\": \"100% Soft and Luxurious Cotton\",\n            \"quantity\": 2,\n            \"price\": 50,\n            \"currency\": \"USD\",\n            \"image_url\": \"http://petersapparel.parseapp.com/img/whiteshirt.png\"\n        },\n        {\n            \"title\": \"Classic Gray T-Shirt\",\n            \"subtitle\": \"100% Soft and Luxurious Cotton\",\n            \"quantity\": 1,\n            \"price\": 25,\n            \"currency\": \"USD\",\n            \"image_url\": \"http://petersapparel.parseapp.com/img/grayshirt.png\"\n        }\n    ]\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1200,
+        "wires": [
+            [
+                "d9b89d970b3800cf"
             ]
         ]
     }
